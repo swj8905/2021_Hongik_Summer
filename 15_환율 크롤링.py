@@ -5,4 +5,4 @@ code = req.urlopen("https://finance.naver.com/marketindex/")
 soup = BeautifulSoup(code, "html.parser")
 price = soup.select("ul#exchangeList span.value")
 for i in price:
-    print(i.string)
+    print(i.string[0:3])
